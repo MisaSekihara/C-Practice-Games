@@ -1,7 +1,6 @@
-﻿using System;
-using Pet.Effect_and_logic;
+﻿using Collection.Effect_and_logic;
 
-namespace Pet.Pages
+namespace Collection.Pages
 {
     public partial class MatrixPage
     {

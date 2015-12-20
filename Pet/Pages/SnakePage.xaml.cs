@@ -1,14 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Threading;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
-using System.Windows.Shapes;
 using System.Windows.Threading;
-using Pet.Effect_and_logic;
+using Collection.Effect_and_logic;
 
-namespace Pet.Pages
+namespace Collection.Pages
 {
     /// <summary>
     /// Interaction logic for SnakePage.xaml

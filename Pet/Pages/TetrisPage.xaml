@@ -1,0 +1,56 @@
+﻿<Page x:Class="Collection.Pages.TetrisPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:wpf="clr-namespace:ConsoleControl.WPF;assembly=ConsoleControl.WPF"
+      mc:Ignorable="d" 
+      d:DesignHeight="660" d:DesignWidth="1050"
+	Title="PuyoPuyo">
+
+    <Grid Background="Black">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition Width="330"/>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        
+        <Canvas Name="GridCanvas" Grid.Column="1" Margin="5" Height="640" Width="320" VerticalAlignment="Top"/>
+        <Canvas Name="MainCanvas" Grid.Column="1" Margin="5" Height="640" Width="320" VerticalAlignment="Top"/>
+        <Border Grid.Column="1" BorderThickness="3" BorderBrush="DarkViolet" Height="640" VerticalAlignment="Top" 
+                Margin="5"/>
+        
+        <Grid Grid.Column="2" >
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Border Grid.Row="0" Grid.Column="0" BorderThickness="3" BorderBrush="DarkViolet" 
+                    Height="128" VerticalAlignment="Top" Margin="5" />
+            <Canvas Name="NextTetrisCanvas" Grid.Column="0" Grid.Row="0" HorizontalAlignment="Left" VerticalAlignment="Top" 
+                Background="#FF111111"/>
+            <Grid Grid.Column="0" Grid.Row="2">
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Button Name="UpButton" Content="" BorderThickness="3" BorderBrush="DarkViolet" Background="MediumSlateBlue" HorizontalAlignment="Center" Grid.Row="0" Grid.Column="1" VerticalAlignment="Top" Width="30" Height="30" Click="UpButton_Click"/>
+                <Button Name="DownButton" Content="" BorderThickness="3" BorderBrush="DarkViolet" Background="MediumSlateBlue" HorizontalAlignment="Center" Grid.Row="2" Grid.Column="1" VerticalAlignment="Top" Width="30" Height="30" Click="DownButton_Click"/>
+                <Button Name="LeftButton" Content="" BorderThickness="3" BorderBrush="DarkViolet" Background="MediumSlateBlue" HorizontalAlignment="Center" Grid.Row="1" Grid.Column="0" VerticalAlignment="Top" Width="30" Height="30" Click="LeftButton_Click"/>
+                <Button Name="RightButton" Content="" BorderThickness="3" BorderBrush="DarkViolet" Background="MediumSlateBlue" HorizontalAlignment="Center" Grid.Row="1" Grid.Column="2" VerticalAlignment="Top" Width="30" Height="30" Click="RightButton_Click"/>
+            </Grid>
+
+        </Grid>
+
+
+    </Grid>
+</Page>

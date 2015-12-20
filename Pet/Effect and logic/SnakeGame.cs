@@ -1,14 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Windows;
-using System.Windows.Controls;
 using System.Windows.Media;
 using System.Windows.Shapes;
-using Pet.Pages;
+using Collection.Pages;
 using Point = System.Drawing.Point;
 using Rectangle = System.Windows.Shapes.Rectangle;
 
-namespace Pet.Effect_and_logic
+namespace Collection.Effect_and_logic
 {
     // ～>ﾟ ～～～～～～～～　SNAKE DIRECTION　～～～～～～～～ ﾟ<～
     public static class SnakeDirection
@@ -33,8 +32,6 @@ namespace Pet.Effect_and_logic
     {
         public Rectangle Shape { get; set; }
         public Point Position { get; set; }
-//        public SnakeBody Next { get; set; }
-//        public SnakeBody Previous { get; set; }
     }
 
 
@@ -43,7 +40,7 @@ namespace Pet.Effect_and_logic
     {
         private SnakePage page;
         public LinkedList<SnakeBody> SnakeBodies = new LinkedList<SnakeBody>();
-        //public SnakeBody Head;
+        private Point lastTailPosition;
         public Egg Egg;
 
         public SnakeGame(SnakePage snakePage)
@@ -125,6 +122,8 @@ namespace Pet.Effect_and_logic
 
             if (CanSnakeMove(direction))
             {
+                lastTailPosition = SnakeBodies.Last.Value.Position;
+
                 var track = new Point();
                 while (part != null)
                 {
@@ -150,12 +149,12 @@ namespace Pet.Effect_and_logic
 
             if (!GameOver())
             {
-                EatEggAndGrow();
+                EatEggAndGrow(direction);
             }            
         }
 
 
-        public void EatEggAndGrow()
+        public void EatEggAndGrow(Point direction)
         {
             if (SnakeBodies.First.Value.Position == Egg.Position)
             {
@@ -169,14 +168,16 @@ namespace Pet.Effect_and_logic
                         Width = 20,
                         Height = 20
                     },
-                    Position = SnakeBodies.Last.Value.Position
+                    Position = lastTailPosition
                 };
                 SnakeBodies.AddLast(tail);
 
                 var player = new MediaPlayer();
                 player.Open(new Uri("../../Sound/se_get.wav", UriKind.RelativeOrAbsolute));
                 player.Play();
-                
+
+                page.RepaintSnake();
+
                 page.MyCanvas.Children.Remove(Egg.Shape);
                 DisplayScore();
                 CreateEgg();
@@ -196,7 +197,7 @@ namespace Pet.Effect_and_logic
             {
                 foreach (var body in SnakeBodies)
                 {
-                    if (head != body && head.Position == body.Position)  // Check if snake will bite itself
+                    if (head != body && head.Position == body.Position)  // Check if snake is about to bite itself
                     {
                         var player = new MediaPlayer();
                         player.Open(new Uri("../../Sound/se_no.wav", UriKind.RelativeOrAbsolute));

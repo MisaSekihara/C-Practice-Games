@@ -1,10 +1,7 @@
 ﻿using System;
-using System.Drawing;
-using Pet.Pages;
-using Brush = System.Windows.Media.Brush;
-using Brushes = System.Windows.Media.Brushes;
+using Collection.Pages;
 
-namespace Pet.Effect_and_logic
+namespace Collection.Effect_and_logic
 {
     public class Matrix
     {
