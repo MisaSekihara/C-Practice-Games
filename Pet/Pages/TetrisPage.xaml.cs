@@ -16,16 +16,14 @@ namespace Collection.Pages
     {
         private readonly TetrisGame game;
         public const int PixelSize = 32;
+        private bool isPauseOn = false;
+        private int rotationCount;
         
-        private int rotationCount = 0;
-        public TetrisBlock CurrentBlock = new TetrisBlock();
-
         public TetrisPage()
         {
             InitializeComponent();
             game = new TetrisGame(this);
             game.Init();
-            Play();
         }
 
         public void DrawGrid()
@@ -61,14 +59,6 @@ namespace Collection.Pages
             }
         }
 
-        public void Play()
-        {
-            CurrentBlock = game.GetRandomBlock();
-            game.CreateTetrisBlock(CurrentBlock, CurrentBlock.Coordinate1);
-            DrawBlock();
-            game.GravityOn();
-        }
-
         public void DrawBlock()
         {
             foreach (var position in game.CurrentMino.FourPositions)
@@ -78,14 +68,31 @@ namespace Collection.Pages
                 Canvas.SetTop(tempShape, position.Y);
                 MainCanvas.Children.Add(tempShape);
             }
+
+            foreach (var cell in game.Grid)
+            {
+                if (cell != null)
+                {
+                    var piece = new Rectangle
+                    {
+                        Stroke = cell.Block.Stroke,
+                        Fill = cell.Block.Fill,
+                        StrokeThickness = 2,
+                        Width = PixelSize,
+                        Height = PixelSize
+                    };
+                    Canvas.SetLeft(piece, cell.GridCoordination.X);
+                    Canvas.SetTop(piece, cell.GridCoordination.Y);
+                    LandedCanvas.Children.Add(piece);
+                }
+            }
         }
 
         private void DownButton_Click(object sender, RoutedEventArgs e)
         {
             var currentPositions = game.CurrentMino.FourPositions;
 
-            bool isMovable = currentPositions.All(position => !(position.Y >= MainCanvas.Height - PixelSize));
-
+            bool isMovable = game.IsMovable("Down");
             while (isMovable)
             {
                 MainCanvas.Children.Clear();
@@ -97,7 +104,7 @@ namespace Collection.Pages
                     MainCanvas.Children.Add(tempShape);
                     game.CurrentMino.FourPositions[index] = new Point(currentPositions[index].X, currentPositions[index].Y + PixelSize);
                 }
-                isMovable = currentPositions.All(position => !(position.Y >= MainCanvas.Height - PixelSize));
+                isMovable = game.IsMovable("Down");
             }
         }
 
@@ -116,6 +123,7 @@ namespace Collection.Pages
                 {
                     x = position.X + PixelSize;
                 }
+
                 if (x >= MainCanvas.Width || (x < 0))
                 {
                     isMovable = false;
@@ -154,30 +162,44 @@ namespace Collection.Pages
         {
             MoveHorrizontal("Right");
         }
-
+       
         private void UpButton_Click(object sender, RoutedEventArgs e)
         {
             switch (rotationCount)
             {
                 case 0 :
-                    game.CreateTetrisBlock(CurrentBlock, CurrentBlock.Coordinate2);
+                    game.CreateTetrisBlock(game.CurrentBlock, game.CurrentBlock.Coordinate2);
                     rotationCount++;
                     break;
 
                 case 1 :
-                    game.CreateTetrisBlock(CurrentBlock, CurrentBlock.Coordinate3);
+                    game.CreateTetrisBlock(game.CurrentBlock, game.CurrentBlock.Coordinate3);
                     rotationCount++;
                     break;                
                 
                 case 2 :
-                    game.CreateTetrisBlock(CurrentBlock, CurrentBlock.Coordinate4);
+                    game.CreateTetrisBlock(game.CurrentBlock, game.CurrentBlock.Coordinate4);
                     rotationCount++;
                     break;
 
                 case 3:
-                    game.CreateTetrisBlock(CurrentBlock, CurrentBlock.Coordinate1);
+                    game.CreateTetrisBlock(game.CurrentBlock, game.CurrentBlock.Coordinate1);
                     rotationCount = 0;
                     break;
+            }
+        }
+
+        private void PauseButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (isPauseOn)
+            {
+                game.TetrisTimer.Start();
+                isPauseOn = false;
+            }
+            else if (!isPauseOn)
+            {
+                game.TetrisTimer.Stop();
+                isPauseOn = true;
             }
         }
     }

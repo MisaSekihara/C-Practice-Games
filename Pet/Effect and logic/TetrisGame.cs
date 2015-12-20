@@ -1,12 +1,11 @@
 ﻿using System;
-using System.Linq;
+using System.Drawing;
 using System.Windows.Controls;
-using System.Windows.Shapes;
-using Point = System.Drawing.Point;
-using System.Windows.Media;
 using System.Windows.Threading;
 using Collection.Pages;
-
+using Brush = System.Windows.Media.Brush;
+using Brushes = System.Windows.Media.Brushes;
+using Rectangle = System.Windows.Shapes.Rectangle;
 
 namespace Collection.Effect_and_logic
 {
@@ -28,6 +27,7 @@ namespace Collection.Effect_and_logic
     {
         public Rectangle Block { get; set; }
         public Point[] FourPositions = new Point [4];
+        public Point GridCoordination;
     }
 
     // 凸 凹 凸 □ 凸   TETRIS BLUEPRINT   凸 凹 凸 □ 凸
@@ -37,10 +37,10 @@ namespace Collection.Effect_and_logic
         {
             Coordinate1 = new int[,] 
             {
-                { 0, 0, 1, 0 },
-                { 0, 0, 1, 0 },
-                { 0, 0, 1, 0 },
-                { 0, 0, 1, 0 }
+                { 0, 1, 0, 0 },
+                { 0, 1, 0, 0 },
+                { 0, 1, 0, 0 },
+                { 0, 1, 0, 0 }
             },
             Coordinate2 = new int[,]
             {
@@ -71,30 +71,30 @@ namespace Collection.Effect_and_logic
         {
             Coordinate1 = new int[,]
             {
-                { 0, 1, 1, 0 },
-                { 0, 1, 0, 0 },
-                { 0, 1, 0, 0 },
-                { 0, 0, 0, 0 }
+                { 1, 0, 0, 0 },
+                { 1, 1, 1, 0 },
+                { 0, 0, 0, 0 },
+                { 0, 0, 0, 0 }                
             },
             Coordinate2 = new int[,]
-            {
-                { 0, 0, 0, 0 },
-                { 1, 1, 1, 0 },
-                { 0, 0, 1, 0 },
-                { 0, 0, 0, 0 }
-            },
-            Coordinate3 = new int[,]
             {
                 { 0, 1, 0, 0 },
                 { 0, 1, 0, 0 },
                 { 1, 1, 0, 0 },
                 { 0, 0, 0, 0 }
             },
+            Coordinate3 = new int[,]
+            {
+                { 0, 0, 0, 0 },
+                { 1, 1, 1, 0 },
+                { 0, 0, 1, 0 },
+                { 0, 0, 0, 0 }
+            },
             Coordinate4 = new int[,]
             {
-                { 1, 0, 0, 0 },
-                { 1, 1, 1, 0 },
-                { 0, 0, 0, 0 },
+                { 0, 1, 1, 0 },
+                { 0, 1, 0, 0 },
+                { 0, 1, 0, 0 },
                 { 0, 0, 0, 0 }
             },
             FillColour = Brushes.Blue,
@@ -105,30 +105,30 @@ namespace Collection.Effect_and_logic
         {
             Coordinate1 = new int[,]
             {
-                { 1, 1, 0, 0 },
-                { 0, 1, 0, 0 },
-                { 0, 1, 0, 0 },
+                { 0, 0, 0, 0 },
+                { 1, 1, 1, 0 },
+                { 1, 0, 0, 0 },
                 { 0, 0, 0, 0 }
             },
             Coordinate2 = new int[,]
-            {
-                { 0, 0, 1, 0 },
-                { 1, 1, 1, 0 },
-                { 0, 0, 0, 0 },
-                { 0, 0, 0, 0 }
-            },
-            Coordinate3 = new int[,]
             {
                 { 0, 1, 0, 0 },
                 { 0, 1, 0, 0 },
                 { 0, 1, 1, 0 },
                 { 0, 0, 0, 0 }
             },
+            Coordinate3 = new int[,]
+            {
+                { 0, 0, 1, 0 },
+                { 1, 1, 1, 0 },
+                { 0, 0, 0, 0 },
+                { 0, 0, 0, 0 }
+            },
             Coordinate4 = new int[,]
             {
-                { 0, 0, 0, 0 },
-                { 1, 1, 1, 0 },
-                { 1, 0, 0, 0 },
+                { 1, 1, 0, 0 },
+                { 0, 1, 0, 0 },
+                { 0, 1, 0, 0 },
                 { 0, 0, 0, 0 }
             },
             FillColour = Brushes.Orange,
@@ -208,30 +208,30 @@ namespace Collection.Effect_and_logic
         {
             Coordinate1 = new int[,]
             {
-                { 1, 0, 0, 0 },
-                { 1, 1, 0, 0 },
-                { 0, 1, 0, 0 },
-                { 0, 0, 0, 0 }
-            },
-            Coordinate2 = new int[,]
-            {
-                { 0, 1, 1, 0 },
-                { 1, 1, 0, 0 },
-                { 0, 0, 0, 0 },
-                { 0, 0, 0, 0 }
-            },
-            Coordinate3 = new int[,]
-            {
                 { 0, 1, 0, 0 },
                 { 0, 1, 1, 0 },
                 { 0, 0, 1, 0 },
                 { 0, 0, 0, 0 }
             },
-            Coordinate4 = new int[,]
+            Coordinate2 = new int[,]
             {
                 { 0, 0, 0, 0 },
                 { 0, 1, 1, 0 },
                 { 1, 1, 0, 0 },
+                { 0, 0, 0, 0 }
+            },            
+            Coordinate3 = new int[,]
+            {
+                { 1, 0, 0, 0 },
+                { 1, 1, 0, 0 },
+                { 0, 1, 0, 0 },
+                { 0, 0, 0, 0 }
+            },
+            Coordinate4 = new int[,]
+            {
+                { 0, 1, 1, 0 },
+                { 1, 1, 0, 0 },
+                { 0, 0, 0, 0 },
                 { 0, 0, 0, 0 }
             },
             FillColour = Brushes.ForestGreen,
@@ -242,30 +242,30 @@ namespace Collection.Effect_and_logic
         {
             Coordinate1 = new int[,]
             {
-                { 0, 0, 0, 0 },
                 { 0, 1, 0, 0 },
-                { 0, 1, 1, 0 },
-                { 0, 1, 0, 0 }
+                { 1, 1, 1, 0 },
+                { 0, 0, 0, 0 },
+                { 0, 0, 0, 0 }
             },
             Coordinate2 = new int[,]
             {
-                { 0, 0, 0, 0 },
-                { 1, 1, 1, 0 },
-                { 0, 0, 1, 0 },
+                { 0, 1, 0, 0 },
+                { 1, 1, 0, 0 },
+                { 0, 1, 0, 0 },
                 { 0, 0, 0, 0 }
             },
             Coordinate3 = new int[,]
             {
+                { 0, 0, 0, 0 },
+                { 1, 1, 1, 0 },
                 { 0, 1, 0, 0 },
-                { 0, 1, 0, 0 },
-                { 1, 1, 0, 0 },
                 { 0, 0, 0, 0 }
             },
             Coordinate4 = new int[,]
             {
-                { 1, 0, 0, 0 },
-                { 1, 1, 1, 0 },
-                { 0, 0, 0, 0 },
+                { 0, 1, 0, 0 },
+                { 0, 1, 1, 0 },
+                { 0, 1, 0, 0 },
                 { 0, 0, 0, 0 }
             },
             FillColour = Brushes.Fuchsia,
@@ -281,7 +281,8 @@ namespace Collection.Effect_and_logic
         private readonly TetrisPage page;
         public Tetriminos[,] Grid;
         public Tetriminos CurrentMino = new Tetriminos();
-        private readonly DispatcherTimer tetrisTimer = new DispatcherTimer();
+        public DispatcherTimer TetrisTimer = new DispatcherTimer();
+        public TetrisBlock CurrentBlock = new TetrisBlock();
 
         public TetrisGame(TetrisPage tetrisPage)
         {
@@ -295,23 +296,45 @@ namespace Collection.Effect_and_logic
             Grid = new Tetriminos[x, y];
 
             page.DrawGrid();
+
+            CurrentBlock = GetRandomBlock();
+            CreateTetrisBlock(CurrentBlock, CurrentBlock.Coordinate1);
+            page.DrawBlock();
+            GravityOn();
+            Update();
         }
 
         public void GravityOn()
         {
-            tetrisTimer.Tick += tetrisTimer_Tick;
-            tetrisTimer.Interval = new TimeSpan(0, 0, 0, 1);
-            tetrisTimer.Start();
+            TetrisTimer.Tick += tetrisTimer_Tick;
+            TetrisTimer.Interval = new TimeSpan(0, 0, 0, 1);
+            TetrisTimer.Start();
         }
 
         private void tetrisTimer_Tick(object sender, EventArgs e)
         {
             var currentPositions = CurrentMino.FourPositions;
-            bool isMovable = currentPositions.All(position => !(position.Y >= page.MainCanvas.Height - TetrisPage.PixelSize));
+            bool isMovable = IsMovable("Down");
 
             if (isMovable)
             {
                 Fall();
+            }
+            if (!isMovable)
+            {
+                for (int index = 0; index < 4; index++)
+                {
+                    int x = currentPositions[index].X / TetrisPage.PixelSize;
+                    int y = currentPositions[index].Y / TetrisPage.PixelSize;
+                    Grid[x, y] = new Tetriminos
+                    {
+                        Block = CurrentMino.Block,
+                        GridCoordination = currentPositions[index]
+                    };
+                }
+                page.MainCanvas.Children.Clear();
+                page.DrawBlock();
+                Update();
             }
         }
 
@@ -375,6 +398,35 @@ namespace Collection.Effect_and_logic
                     }
                 }
             }
+        }
+
+        public void Update()
+        {
+            CurrentBlock = GetRandomBlock();
+            CreateTetrisBlock(CurrentBlock, CurrentBlock.Coordinate1);
+            page.DrawBlock();
+            
+        }
+
+        public bool IsMovable(string direction)
+        {
+            if (direction == "Down")
+            {
+                foreach (var position in CurrentMino.FourPositions)
+                {
+                    if (position.Y >= page.MainCanvas.Height - TetrisPage.PixelSize)
+                    {
+                        return false;
+                    }
+                    int x = position.X/TetrisPage.PixelSize;
+                    int y = (position.Y / TetrisPage.PixelSize) + 1;
+                    if (Grid[x, y] != null)
+                    {
+                        return false;
+                    }
+                }
+            }
+            return true;
         }
     }
 }
