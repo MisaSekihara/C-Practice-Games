@@ -16,7 +16,9 @@ namespace Collection.Pages
     {
         private readonly TetrisGame game;
         public const int PixelSize = 32;
-        private readonly DispatcherTimer tetrisTimer = new DispatcherTimer();
+        
+        private int rotationCount = 0;
+        public TetrisBlock CurrentBlock = new TetrisBlock();
 
         public TetrisPage()
         {
@@ -61,20 +63,10 @@ namespace Collection.Pages
 
         public void Play()
         {
-            game.CreateTetrisBlock(TetrisBluePrint.TetrisI);
+            CurrentBlock = game.GetRandomBlock();
+            game.CreateTetrisBlock(CurrentBlock, CurrentBlock.Coordinate1);
             DrawBlock();
-            GravityOn();
-        }
-
-        private void tetrisTimer_Tick(object sender, EventArgs e)
-        {
-            var currentPositions = game.CurrentMino.FourPositions;
-            bool isMovable = currentPositions.All(position => !(position.Y >= MainCanvas.Height - PixelSize));
-
-            if (isMovable)
-            {
-                Fall();
-            }
+            game.GravityOn();
         }
 
         public void DrawBlock()
@@ -85,27 +77,6 @@ namespace Collection.Pages
                 Canvas.SetLeft(tempShape, position.X);
                 Canvas.SetTop(tempShape, position.Y);
                 MainCanvas.Children.Add(tempShape);
-            }
-        }
-        
-        public void GravityOn()
-        {
-            tetrisTimer.Tick += tetrisTimer_Tick;
-            tetrisTimer.Interval = new TimeSpan(0, 0, 0, 1);
-            tetrisTimer.Start();
-        }
-
-        private void Fall()
-        {
-            MainCanvas.Children.Clear();
-            var currentPositions = game.CurrentMino.FourPositions;
-            for (int index = 0; index < 4; index++)
-            {
-                var tempShape = game.GetBlock(game.CurrentMino.Block.Stroke, game.CurrentMino.Block.Fill);
-                Canvas.SetLeft(tempShape, currentPositions[index].X);
-                Canvas.SetTop(tempShape, currentPositions[index].Y + PixelSize);
-                MainCanvas.Children.Add(tempShape);
-                game.CurrentMino.FourPositions[index] = new Point(currentPositions[index].X, currentPositions[index].Y + PixelSize);
             }
         }
 
@@ -186,7 +157,28 @@ namespace Collection.Pages
 
         private void UpButton_Click(object sender, RoutedEventArgs e)
         {
-            throw new NotImplementedException();
+            switch (rotationCount)
+            {
+                case 0 :
+                    game.CreateTetrisBlock(CurrentBlock, CurrentBlock.Coordinate2);
+                    rotationCount++;
+                    break;
+
+                case 1 :
+                    game.CreateTetrisBlock(CurrentBlock, CurrentBlock.Coordinate3);
+                    rotationCount++;
+                    break;                
+                
+                case 2 :
+                    game.CreateTetrisBlock(CurrentBlock, CurrentBlock.Coordinate4);
+                    rotationCount++;
+                    break;
+
+                case 3:
+                    game.CreateTetrisBlock(CurrentBlock, CurrentBlock.Coordinate1);
+                    rotationCount = 0;
+                    break;
+            }
         }
     }
 }
