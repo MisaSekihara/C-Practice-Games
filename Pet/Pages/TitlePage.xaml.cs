@@ -13,8 +13,7 @@ namespace Collection.Pages
 
         private void StartMatrix(object sender, RoutedEventArgs e)
         {
-            var nav = NavigationService.GetNavigationService(this);
-            if (nav != null) nav.Navigate(new Uri("Pages/MatrixPage.xaml", UriKind.RelativeOrAbsolute));
+
         }        
         
         private void StartSnake(object sender, RoutedEventArgs e)

@@ -51,7 +51,7 @@
         </Image>
 
 
-        <Button Content="Matrix" HorizontalAlignment="Left" Margin="25,23,0,0" VerticalAlignment="Top" Width="132" Height="28" Background="{x:Null}" BorderBrush="#FF00BE00" Foreground="Lime" FontFamily="OCR A Std" FontWeight="Bold" BorderThickness="2" Click="StartMatrix" Template="{DynamicResource ButtonBaseControlTemplate1MouseOver}"/>
+        <Button Content="Matrix" HorizontalAlignment="Left" Margin="25,23,0,0" VerticalAlignment="Top" Width="132" Height="28" Background="{x:Null}" BorderBrush="#FF00BE00" Foreground="Lime" FontFamily="OCR A Std" FontWeight="Bold" BorderThickness="2" Template="{DynamicResource ButtonBaseControlTemplate1MouseOver}"/>
         <Button Content="Snake" HorizontalAlignment="Left" Margin="25,356,0,0" VerticalAlignment="Top" Width="132" Height="28" Background="{x:Null}" BorderBrush="#FF00BE00" Foreground="Lime" FontFamily="OCR A Std" FontWeight="Bold" BorderThickness="2" Click="StartSnake" Template="{DynamicResource ButtonBaseControlTemplate1MouseOver}"/>
         <Button Content="Fortune Teller" HorizontalAlignment="Left" Margin="25,76,0,0" VerticalAlignment="Top" Width="132" Height="28" Background="{x:Null}" BorderBrush="#FF00BE00" Foreground="Lime" FontFamily="OCR A Std" FontWeight="Bold" BorderThickness="2" Template="{DynamicResource ButtonBaseControlTemplate1MouseOver}"/>
         <Button Content="Traffic Jam" HorizontalAlignment="Left" Margin="25,243,0,0" VerticalAlignment="Top" Width="132" Height="28" Background="{x:Null}" BorderBrush="#FF00BE00" Foreground="Lime" FontFamily="OCR A Std" FontWeight="Bold" BorderThickness="2" Template="{DynamicResource ButtonBaseControlTemplate1MouseOver}"/>
