@@ -1,0 +1,15 @@
+C:\Users\misa9_000\documents\visual studio 2013\Projects\MT_WinForm\MT_WinForm\bin\Debug\MT_WinForm.dll.config
+C:\Users\misa9_000\documents\visual studio 2013\Projects\MT_WinForm\MT_WinForm\bin\Debug\MT_WinForm.dll
+C:\Users\misa9_000\documents\visual studio 2013\Projects\MT_WinForm\MT_WinForm\bin\Debug\MT_WinForm.pdb
+C:\Users\misa9_000\documents\visual studio 2013\Projects\MT_WinForm\MT_WinForm\obj\Debug\MT_WinForm.FormBrowseFile.resources
+C:\Users\misa9_000\documents\visual studio 2013\Projects\MT_WinForm\MT_WinForm\obj\Debug\MT_WinForm.FormTitle.resources
+C:\Users\misa9_000\documents\visual studio 2013\Projects\MT_WinForm\MT_WinForm\obj\Debug\MT_WinForm.IForm.resources
+C:\Users\misa9_000\documents\visual studio 2013\Projects\MT_WinForm\MT_WinForm\obj\Debug\MT_WinForm.Properties.Resources.resources
+C:\Users\misa9_000\documents\visual studio 2013\Projects\MT_WinForm\MT_WinForm\obj\Debug\MT_WinFormVIew.csproj.GenerateResource.Cache
+C:\Users\misa9_000\documents\visual studio 2013\Projects\MT_WinForm\MT_WinForm\obj\Debug\MT_WinForm.dll
+C:\Users\misa9_000\documents\visual studio 2013\Projects\MT_WinForm\MT_WinForm\obj\Debug\MT_WinForm.pdb
+C:\Users\misa9_000\documents\visual studio 2013\Projects\MT_WinForm\MT_WinForm\obj\Debug\MT_WinForm.FormNewGame.resources
+C:\Users\misa9_000\documents\visual studio 2013\Projects\MT_WinForm\MT_WinForm\obj\Debug\MT_WinFormVIew.csprojResolveAssemblyReference.cache
+C:\Users\misa9_000\documents\visual studio 2013\Projects\MT_WinForm\MT_WinForm\obj\Debug\MT_WinForm.Forms.FormGameScreen.resources
+C:\Users\misa9_000\documents\visual studio 2013\Projects\MT_WinForm\MT_WinForm\bin\Debug\MinoThesGameConsoleApp.exe
+C:\Users\misa9_000\documents\visual studio 2013\Projects\MT_WinForm\MT_WinForm\bin\Debug\MinoThesGameConsoleApp.pdb

@@ -1,0 +1,53 @@
+C:\Users\misa9_000\Documents\Visual Studio 2013\Projects\MT_WinForm\MT_WinForm\bin\Debug\Resources\history.txt
+C:\Users\misa9_000\Documents\Visual Studio 2013\Projects\MT_WinForm\MT_WinForm\bin\Debug\Resources\level1.txt
+C:\Users\misa9_000\Documents\Visual Studio 2013\Projects\MT_WinForm\MT_WinForm\bin\Debug\Resources\level10.txt
+C:\Users\misa9_000\Documents\Visual Studio 2013\Projects\MT_WinForm\MT_WinForm\bin\Debug\Resources\level2.txt
+C:\Users\misa9_000\Documents\Visual Studio 2013\Projects\MT_WinForm\MT_WinForm\bin\Debug\Resources\level3.txt
+C:\Users\misa9_000\Documents\Visual Studio 2013\Projects\MT_WinForm\MT_WinForm\bin\Debug\Resources\level4.txt
+C:\Users\misa9_000\Documents\Visual Studio 2013\Projects\MT_WinForm\MT_WinForm\bin\Debug\Resources\level5.txt
+C:\Users\misa9_000\Documents\Visual Studio 2013\Projects\MT_WinForm\MT_WinForm\bin\Debug\Resources\level6.txt
+C:\Users\misa9_000\Documents\Visual Studio 2013\Projects\MT_WinForm\MT_WinForm\bin\Debug\Resources\level7.txt
+C:\Users\misa9_000\Documents\Visual Studio 2013\Projects\MT_WinForm\MT_WinForm\bin\Debug\Resources\level8.txt
+C:\Users\misa9_000\Documents\Visual Studio 2013\Projects\MT_WinForm\MT_WinForm\bin\Debug\Resources\level9.txt
+C:\Users\misa9_000\Documents\Visual Studio 2013\Projects\MT_WinForm\MT_WinForm\bin\Debug\Resources\SaveData1.txt
+C:\Users\misa9_000\Documents\Visual Studio 2013\Projects\MT_WinForm\MT_WinForm\bin\Debug\MT_WinForm.dll.config
+C:\Users\misa9_000\Documents\Visual Studio 2013\Projects\MT_WinForm\MT_WinForm\bin\Debug\MT_WinForm.dll
+C:\Users\misa9_000\Documents\Visual Studio 2013\Projects\MT_WinForm\MT_WinForm\bin\Debug\MT_WinForm.pdb
+C:\Users\misa9_000\Documents\Visual Studio 2013\Projects\MT_WinForm\MT_WinForm\obj\Debug\MT_WinForm.Forms.FormBrowseFile.resources
+C:\Users\misa9_000\Documents\Visual Studio 2013\Projects\MT_WinForm\MT_WinForm\obj\Debug\MT_WinForm.Forms.FormHistoryOpen.resources
+C:\Users\misa9_000\Documents\Visual Studio 2013\Projects\MT_WinForm\MT_WinForm\obj\Debug\MT_WinForm.Forms.FormGameScreen.resources
+C:\Users\misa9_000\Documents\Visual Studio 2013\Projects\MT_WinForm\MT_WinForm\obj\Debug\MT_WinForm.Forms.FormLoadGame.resources
+C:\Users\misa9_000\Documents\Visual Studio 2013\Projects\MT_WinForm\MT_WinForm\obj\Debug\MT_WinForm.Forms.FormNewGame.resources
+C:\Users\misa9_000\Documents\Visual Studio 2013\Projects\MT_WinForm\MT_WinForm\obj\Debug\MT_WinForm.Forms.FormTitle.resources
+C:\Users\misa9_000\Documents\Visual Studio 2013\Projects\MT_WinForm\MT_WinForm\obj\Debug\MT_WinForm.Forms.IForm.resources
+C:\Users\misa9_000\Documents\Visual Studio 2013\Projects\MT_WinForm\MT_WinForm\obj\Debug\MT_WinForm.Properties.Resources.resources
+C:\Users\misa9_000\Documents\Visual Studio 2013\Projects\MT_WinForm\MT_WinForm\obj\Debug\MT_WinForm.csproj.GenerateResource.Cache
+C:\Users\misa9_000\Documents\Visual Studio 2013\Projects\MT_WinForm\MT_WinForm\obj\Debug\MT_WinForm.dll
+C:\Users\misa9_000\Documents\Visual Studio 2013\Projects\MT_WinForm\MT_WinForm\obj\Debug\MT_WinForm.pdb
+C:\Users\misa9_000\OneDrive\PR283\Zip this2\Project\MT_WinForm\bin\Debug\Resources\history.txt
+C:\Users\misa9_000\OneDrive\PR283\Zip this2\Project\MT_WinForm\bin\Debug\Resources\level1.txt
+C:\Users\misa9_000\OneDrive\PR283\Zip this2\Project\MT_WinForm\bin\Debug\Resources\level10.txt
+C:\Users\misa9_000\OneDrive\PR283\Zip this2\Project\MT_WinForm\bin\Debug\Resources\level2.txt
+C:\Users\misa9_000\OneDrive\PR283\Zip this2\Project\MT_WinForm\bin\Debug\Resources\level3.txt
+C:\Users\misa9_000\OneDrive\PR283\Zip this2\Project\MT_WinForm\bin\Debug\Resources\level4.txt
+C:\Users\misa9_000\OneDrive\PR283\Zip this2\Project\MT_WinForm\bin\Debug\Resources\level5.txt
+C:\Users\misa9_000\OneDrive\PR283\Zip this2\Project\MT_WinForm\bin\Debug\Resources\level6.txt
+C:\Users\misa9_000\OneDrive\PR283\Zip this2\Project\MT_WinForm\bin\Debug\Resources\level7.txt
+C:\Users\misa9_000\OneDrive\PR283\Zip this2\Project\MT_WinForm\bin\Debug\Resources\level8.txt
+C:\Users\misa9_000\OneDrive\PR283\Zip this2\Project\MT_WinForm\bin\Debug\Resources\level9.txt
+C:\Users\misa9_000\OneDrive\PR283\Zip this2\Project\MT_WinForm\bin\Debug\Resources\SaveData1.txt
+C:\Users\misa9_000\OneDrive\PR283\Zip this2\Project\MT_WinForm\bin\Debug\MT_WinForm.dll.config
+C:\Users\misa9_000\OneDrive\PR283\Zip this2\Project\MT_WinForm\bin\Debug\MT_WinForm.dll
+C:\Users\misa9_000\OneDrive\PR283\Zip this2\Project\MT_WinForm\bin\Debug\MT_WinForm.pdb
+C:\Users\misa9_000\OneDrive\PR283\Zip this2\Project\MT_WinForm\obj\Debug\MT_WinForm.csprojResolveAssemblyReference.cache
+C:\Users\misa9_000\OneDrive\PR283\Zip this2\Project\MT_WinForm\obj\Debug\MT_WinForm.Forms.FormBrowseFile.resources
+C:\Users\misa9_000\OneDrive\PR283\Zip this2\Project\MT_WinForm\obj\Debug\MT_WinForm.Forms.FormHistoryOpen.resources
+C:\Users\misa9_000\OneDrive\PR283\Zip this2\Project\MT_WinForm\obj\Debug\MT_WinForm.Forms.FormGameScreen.resources
+C:\Users\misa9_000\OneDrive\PR283\Zip this2\Project\MT_WinForm\obj\Debug\MT_WinForm.Forms.FormLoadGame.resources
+C:\Users\misa9_000\OneDrive\PR283\Zip this2\Project\MT_WinForm\obj\Debug\MT_WinForm.Forms.FormNewGame.resources
+C:\Users\misa9_000\OneDrive\PR283\Zip this2\Project\MT_WinForm\obj\Debug\MT_WinForm.Forms.FormTitle.resources
+C:\Users\misa9_000\OneDrive\PR283\Zip this2\Project\MT_WinForm\obj\Debug\MT_WinForm.Forms.IForm.resources
+C:\Users\misa9_000\OneDrive\PR283\Zip this2\Project\MT_WinForm\obj\Debug\MT_WinForm.Properties.Resources.resources
+C:\Users\misa9_000\OneDrive\PR283\Zip this2\Project\MT_WinForm\obj\Debug\MT_WinForm.csproj.GenerateResource.Cache
+C:\Users\misa9_000\OneDrive\PR283\Zip this2\Project\MT_WinForm\obj\Debug\MT_WinForm.dll
+C:\Users\misa9_000\OneDrive\PR283\Zip this2\Project\MT_WinForm\obj\Debug\MT_WinForm.pdb

@@ -1,0 +1,10 @@
+C:\Users\misa9_000\documents\visual studio 2013\Projects\MT_WinForm\MT_Game\bin\Debug\MT_Game.exe.config
+C:\Users\misa9_000\documents\visual studio 2013\Projects\MT_WinForm\MT_Game\bin\Debug\MT_Game.exe
+C:\Users\misa9_000\documents\visual studio 2013\Projects\MT_WinForm\MT_Game\bin\Debug\MT_Game.pdb
+C:\Users\misa9_000\documents\visual studio 2013\Projects\MT_WinForm\MT_Game\bin\Debug\MT_WinForm.dll
+C:\Users\misa9_000\documents\visual studio 2013\Projects\MT_WinForm\MT_Game\bin\Debug\MT_WinForm.pdb
+C:\Users\misa9_000\documents\visual studio 2013\Projects\MT_WinForm\MT_Game\obj\Debug\MT_GameModel.csprojResolveAssemblyReference.cache
+C:\Users\misa9_000\documents\visual studio 2013\Projects\MT_WinForm\MT_Game\obj\Debug\MT_Game.Properties.Resources.resources
+C:\Users\misa9_000\documents\visual studio 2013\Projects\MT_WinForm\MT_Game\obj\Debug\MT_GameModel.csproj.GenerateResource.Cache
+C:\Users\misa9_000\documents\visual studio 2013\Projects\MT_WinForm\MT_Game\obj\Debug\MT_Game.exe
+C:\Users\misa9_000\documents\visual studio 2013\Projects\MT_WinForm\MT_Game\obj\Debug\MT_Game.pdb

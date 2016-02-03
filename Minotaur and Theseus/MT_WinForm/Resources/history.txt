@@ -1,0 +1,27 @@
+level3.txt#C:\Users\misa9_000\Documents\Visual Studio 2013\Projects\MT_WinForm\MT_Game\bin\Debug\Resources\level3.txt
+level8.txt#C:\Users\misa9_000\Documents\Visual Studio 2013\Projects\MT_WinForm\MT_Game\bin\Debug\Resources\level8.txt
+2#DefaultLevel
+4#DefaultLevel
+1#DefaultLevel
+9#DefaultLevel
+5#DefaultLevel
+SaveData1.txt#C:\Users\misa9_000\Documents\Visual Studio 2013\Projects\MT_WinForm\MT_WinForm\Resources\SaveData1.txt
+2#DefaultLevel
+3#DefaultLevel
+4#DefaultLevel
+3#DefaultLevel
+4#DefaultLevel
+1#DefaultLevel
+2#DefaultLevel
+2#DefaultLevel
+1#DefaultLevel
+save2.txt#C:\Users\misa9_000\OneDrive\Documents\save2.txt
+1#DefaultLevel
+2#DefaultLevel
+3#DefaultLevel
+4#DefaultLevel
+5#DefaultLevel
+4#DefaultLevel
+3#DefaultLevel
+2#DefaultLevel
+level1.txt#C:\Users\misa9_000\OneDrive\Documents\level1.txt
