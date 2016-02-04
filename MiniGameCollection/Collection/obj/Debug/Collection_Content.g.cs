@@ -8,6 +8,9 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("sound/se_clear1.wav")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("sound/se_clear2.wav")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("sound/se_clear3.wav")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("sound/se_click2.wav")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("sound/se_click3.wav")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("sound/se_get.wav")]

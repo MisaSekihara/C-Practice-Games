@@ -6,35 +6,78 @@
       mc:Ignorable="d" 
       d:DesignHeight="660" d:DesignWidth="1050"
 	Title="PuyoPuyo">
+    <Page.Resources>
+        <Style TargetType="{x:Type Button}">
+            <Style.Triggers>
+                <EventTrigger RoutedEvent="UIElement.MouseEnter">
+                    <!--                    <SoundPlayerAction Source="Sound/se_click2.wav" />-->
+                    <SoundPlayerAction Source="/Collection;component/Sound/se_click2.wav" />
+                </EventTrigger>
 
-    <Grid Background="Black">
+                <EventTrigger RoutedEvent="ButtonBase.Click">
+                    <!--                    <SoundPlayerAction Source="Sound/se_click3.wav" />-->
+                    <SoundPlayerAction Source="/Collection;component/Sound/se_click3.wav" />
+                </EventTrigger>
+            </Style.Triggers>
+        </Style>
+
+    </Page.Resources>
+
+    <Grid Background="AliceBlue">
         <Grid.ColumnDefinitions>
             <ColumnDefinition />
             <ColumnDefinition Width="330"/>
-            <ColumnDefinition Width="150"/>
+            <ColumnDefinition Width="30"/>
+            <ColumnDefinition Width="250"/>
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
-        
+
         <Canvas Name="GridCanvas" Grid.Column="1" Margin="5" Height="640" Width="320" VerticalAlignment="Top"/>
         <Canvas Name="LandedCanvas" Grid.Column="1" Margin="5" Height="640" Width="320" VerticalAlignment="Top"/>
         <Canvas Name="MainCanvas" Grid.Column="1" Margin="5" Height="640" Width="320" VerticalAlignment="Top"/>
-        <Border Grid.Column="1" BorderThickness="3" BorderBrush="DarkViolet" Height="640" VerticalAlignment="Top" 
-                Margin="5"/>
-        
-        <Grid Grid.Column="2" >
+
+        <Border Grid.Column="1" BorderThickness="5" CornerRadius="10" Height="640" Margin="5" VerticalAlignment="Top">
+            <Border.BorderBrush>
+                <VisualBrush>
+                    <VisualBrush.Visual>
+                        <Rectangle StrokeDashArray="1 2"
+                           Stroke="DarkViolet"
+                           StrokeThickness="4"
+                           RadiusX="{Binding RelativeSource={RelativeSource AncestorType={x:Type Border}}, Path=CornerRadius.TopRight}"
+                           RadiusY="{Binding RelativeSource={RelativeSource AncestorType={x:Type Border}}, Path=CornerRadius.BottomLeft}"
+                           Width="{Binding RelativeSource={RelativeSource AncestorType={x:Type Border}}, Path=ActualWidth}"
+                           Height="{Binding RelativeSource={RelativeSource AncestorType={x:Type Border}}, Path=ActualHeight}"/>
+                    </VisualBrush.Visual>
+                </VisualBrush>
+            </Border.BorderBrush>
+        </Border>
+
+        <Grid Grid.Column="3" >
             <Grid.RowDefinitions>
                 <RowDefinition />
-                <RowDefinition />
-                <RowDefinition />
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="250"/>
                 <RowDefinition />
             </Grid.RowDefinitions>
-            <Border Grid.Row="0" Grid.Column="0" BorderThickness="3" BorderBrush="DarkViolet" 
-                    Height="128" VerticalAlignment="Top" Margin="5" />
-            <Canvas Name="NextTetrisCanvas" Grid.Column="0" Grid.Row="0" HorizontalAlignment="Left" VerticalAlignment="Top" 
-                Background="#FF111111"/>
+            <Border Grid.Row="0" BorderThickness="5" CornerRadius="10" Height="128" Margin="5" VerticalAlignment="Top">
+                <Border.BorderBrush>
+                    <VisualBrush>
+                        <VisualBrush.Visual>
+                            <Rectangle StrokeDashArray="1 2"
+                           Stroke="DarkViolet"
+                           StrokeThickness="4"
+                           RadiusX="{Binding RelativeSource={RelativeSource AncestorType={x:Type Border}}, Path=CornerRadius.TopRight}"
+                           RadiusY="{Binding RelativeSource={RelativeSource AncestorType={x:Type Border}}, Path=CornerRadius.BottomLeft}"
+                           Width="{Binding RelativeSource={RelativeSource AncestorType={x:Type Border}}, Path=ActualWidth}"
+                           Height="{Binding RelativeSource={RelativeSource AncestorType={x:Type Border}}, Path=ActualHeight}"/>
+                        </VisualBrush.Visual>
+                    </VisualBrush>
+                </Border.BorderBrush>
+            </Border>
+
+            <Canvas Name="NextTetrisCanvas" Grid.Column="0" Grid.Row="0" HorizontalAlignment="Left" VerticalAlignment="Top" Background="#FF111111"/>
             <Grid Grid.Column="0" Grid.Row="2">
                 <Grid.RowDefinitions>
-                    <RowDefinition />
                     <RowDefinition />
                     <RowDefinition />
                     <RowDefinition />
@@ -44,11 +87,52 @@
                     <ColumnDefinition/>
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
-                <Button Name="UpButton" Content="" BorderThickness="3" BorderBrush="DarkViolet" Background="MediumSlateBlue" HorizontalAlignment="Center" Grid.Row="0" Grid.Column="1" VerticalAlignment="Top" Width="30" Height="30" Click="UpButton_Click"/>
-                <Button Name="DownButton" Content="" BorderThickness="3" BorderBrush="DarkViolet" Background="MediumSlateBlue" HorizontalAlignment="Center" Grid.Row="2" Grid.Column="1" VerticalAlignment="Top" Width="30" Height="30" Click="DownButton_Click"/>
-                <Button Name="LeftButton" Content="" BorderThickness="3" BorderBrush="DarkViolet" Background="MediumSlateBlue" HorizontalAlignment="Center" Grid.Row="1" Grid.Column="0" VerticalAlignment="Top" Width="30" Height="30" Click="LeftButton_Click"/>
-                <Button Name="RightButton" Content="" BorderThickness="3" BorderBrush="DarkViolet" Background="MediumSlateBlue" HorizontalAlignment="Center" Grid.Row="1" Grid.Column="2" VerticalAlignment="Top" Width="30" Height="30" Click="RightButton_Click"/>
-                <Button Name="PauseButton" Content="" BorderThickness="3" BorderBrush="DarkViolet" Background="MediumSlateBlue" HorizontalAlignment="Center" Grid.Row="3" Grid.Column="2" VerticalAlignment="Center" Width="50" Height="25" Click="PauseButton_Click"/>
+                <Button Name="UpButton" Grid.Row="0" Grid.Column="1" Width="50" Height="50"
+                        Click="UpButton_Click" BorderBrush="{x:Null}" Style="{StaticResource ButtonUiStyle}">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/Collection;component/Images/UI/up_button.png"/>
+                    </Button.Background>
+                </Button>
+                <Button Name="DownButton" Grid.Row="2" Grid.Column="1" Width="50" Height="50" 
+                        Click="DownButton_Click" BorderBrush="{x:Null}" Style="{StaticResource ButtonUiStyle}">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/Collection;component/Images/UI/down_button.png"/>
+                    </Button.Background>
+                </Button>
+                <Button Name="LeftButton" Grid.Row="1" Grid.Column="0" Width="50" Height="50" 
+                        Click="LeftButton_Click" BorderBrush="{x:Null}" Style="{StaticResource ButtonUiStyle}">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/Collection;component/Images/UI/left_button.png"/>
+                    </Button.Background>
+                </Button>
+                <Button Name="RightButton" Grid.Row="1" Grid.Column="2" Width="50" Height="50" 
+                        Click="RightButton_Click" BorderBrush="{x:Null}" Style="{StaticResource ButtonUiStyle}">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/Collection;component/Images/UI/right_button.png"/>
+                    </Button.Background>
+                </Button>
+            </Grid>
+
+            <Grid Grid.Column="0" Grid.Row="3" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                
+                <Button Name="PauseButton" Content="Pause" Grid.Column="0" Width="70" Height="50"
+                        Click="PauseButton_Click" BorderBrush="{x:Null}" FontFamily="OCR A Std" FontSize="11" FontWeight="Bold" 
+                        Foreground="Black" Style="{StaticResource ButtonUiStyle}">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/Collection;component/Images/UI/option_button.png" Stretch="Uniform"/>
+                    </Button.Background>
+                </Button>               
+                <Button Name="ResetButton" Content="Reset" Grid.Column="1" Width="70" Height="50"
+                        Click="RestButton_Click" BorderBrush="{x:Null}" FontFamily="OCR A Std" FontSize="11" FontWeight="Bold" 
+                        Foreground="Black" Style="{StaticResource ButtonUiStyle}">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/Collection;component/Images/UI/option_button.png" Stretch="Uniform"/>
+                    </Button.Background>
+                </Button>
             </Grid>
 
         </Grid>

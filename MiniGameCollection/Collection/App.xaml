@@ -7,14 +7,40 @@
         <Style TargetType="Button">
             <Style.Triggers>
                 <EventTrigger RoutedEvent="MouseEnter">
-                    <SoundPlayerAction Source="Sound/se_click2.wav" />
+<!--                    <SoundPlayerAction Source="Sound/se_click2.wav" />-->
+                    <SoundPlayerAction Source="/Collection;component/Sound/se_click2.wav" />
                 </EventTrigger>                
                 
                 <EventTrigger RoutedEvent="Click">
-                    <SoundPlayerAction Source="Sound/se_click3.wav" />
+<!--                    <SoundPlayerAction Source="Sound/se_click3.wav" />-->
+                    <SoundPlayerAction Source="/Collection;component/Sound/se_click3.wav" />
                 </EventTrigger>
-
             </Style.Triggers>
         </Style>
+
+        <Style x:Key="ButtonUiStyle" TargetType="Button" BasedOn="{StaticResource {x:Type Button}}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border x:Name="border" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="True">
+                            <ContentPresenter x:Name="contentPresenter" ContentTemplate="{TemplateBinding ContentTemplate}" 
+                                              Content="{TemplateBinding Content}" ContentStringFormat="{TemplateBinding ContentStringFormat}" Focusable="False" 
+                                              HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" 
+                                              SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Margin" Value="0,6,0,0"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter Property="Margin" Value="0,10,0,0"/>
+                            </Trigger>                            
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    
+    
     </Application.Resources>
 </Application>

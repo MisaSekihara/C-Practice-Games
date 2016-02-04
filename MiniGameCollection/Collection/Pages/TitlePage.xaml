@@ -35,12 +35,12 @@
                             <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Source" Duration="0:0:1">
                                 <DiscreteObjectKeyFrame KeyTime="0:0:0">
                                     <DiscreteObjectKeyFrame.Value>
-                                        <BitmapImage UriSource="/Collection;component/Images/tech bird1.jpg"/>
+                                        <BitmapImage UriSource="/Images/Background/tech bird1.jpg"/>
                                     </DiscreteObjectKeyFrame.Value>
                                 </DiscreteObjectKeyFrame>
                                 <DiscreteObjectKeyFrame KeyTime="0:0:0.5">
                                     <DiscreteObjectKeyFrame.Value>
-                                        <BitmapImage UriSource="/Collection;component/Images/tech bird2.jpg"/>
+                                        <BitmapImage UriSource="/Images/Background/tech bird2.jpg"/>
                                     </DiscreteObjectKeyFrame.Value>
                                 </DiscreteObjectKeyFrame>
                             </ObjectAnimationUsingKeyFrames>

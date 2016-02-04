@@ -1,12 +1,9 @@
-﻿using System;
-using System.Threading;
-using System.Timers;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
-using System.Windows.Threading;
-using Collection.Effect_and_logic;
+using Collection.GameLogic.Tetris;
 using Point = System.Drawing.Point;
 
 namespace Collection.Pages
@@ -85,6 +82,11 @@ namespace Collection.Pages
                     LandedCanvas.Children.Add(piece);
                 }
             }
+        }
+
+        public void CleanCanvas()
+        {
+            LandedCanvas.Children.Clear();
         }
 
         private void DownButton_Click(object sender, RoutedEventArgs e)
@@ -193,13 +195,21 @@ namespace Collection.Pages
             if (isPauseOn)
             {
                 game.TetrisTimer.Start();
+                PauseButton.Content = "Pause";
                 isPauseOn = false;
             }
             else if (!isPauseOn)
             {
                 game.TetrisTimer.Stop();
+                PauseButton.Content = "Start";
                 isPauseOn = true;
             }
+        }
+
+        private void RestButton_Click(object sender, RoutedEventArgs e)
+        {
+            var navigationService = NavigationService;
+            if (navigationService != null) navigationService.Refresh();
         }
     }
 }

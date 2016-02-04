@@ -4,7 +4,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Threading;
-using Collection.Effect_and_logic;
+using Collection.GameLogic.Snake;
 
 namespace Collection.Pages
 {

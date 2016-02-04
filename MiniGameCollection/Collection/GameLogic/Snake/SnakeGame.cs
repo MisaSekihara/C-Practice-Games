@@ -7,34 +7,8 @@ using Collection.Pages;
 using Point = System.Drawing.Point;
 using Rectangle = System.Windows.Shapes.Rectangle;
 
-namespace Collection.Effect_and_logic
+namespace Collection.GameLogic.Snake
 {
-    // ～>ﾟ ～～～～～～～～　SNAKE DIRECTION　～～～～～～～～ ﾟ<～
-    public static class SnakeDirection
-    {
-        public static Point Up = new Point(0, -20);
-        public static Point Down = new Point(0, 20);
-        public static Point Left = new Point(-20, 0);
-        public static Point Right = new Point(20, 0);
-    }
-
-   
-    // ～>ﾟ ～～～～～～～～～～　EGG　～～～～～～～～～～～ ﾟ<～
-        public class Egg
-    {
-        public Ellipse Shape { get; set; }
-        public Point Position { get; set; }
-    }
-
-
-    // ～>ﾟ ～～～～～～～　SNAKE BODY (NODE)　～～～～～～～ ﾟ<～
-    public class SnakeBody
-    {
-        public Rectangle Shape { get; set; }
-        public Point Position { get; set; }
-    }
-
-
     // ～>ﾟ ～～～～～～～～～　SNAKE GAME　～～～～～～～～～ ﾟ<～
     public class SnakeGame
     {

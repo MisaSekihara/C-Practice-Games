@@ -65,9 +65,15 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Effect and logic\Matrix.cs" />
-    <Compile Include="Effect and logic\SnakeGame.cs" />
-    <Compile Include="Effect and logic\TetrisGame.cs" />
+    <Compile Include="GameLogic\Matrix.cs" />
+    <Compile Include="GameLogic\Snake\Egg.cs" />
+    <Compile Include="GameLogic\Snake\SnakeBody.cs" />
+    <Compile Include="GameLogic\Snake\SnakeDirection.cs" />
+    <Compile Include="GameLogic\Snake\SnakeGame.cs" />
+    <Compile Include="GameLogic\Tetris\TetrisBlock.cs" />
+    <Compile Include="GameLogic\Tetris\Tetriminos.cs" />
+    <Compile Include="GameLogic\Tetris\TetrisBluePrint.cs" />
+    <Compile Include="GameLogic\Tetris\TetrisGame.cs" />
     <Compile Include="Pages\TestPage.xaml.cs">
       <DependentUpon>TestPage.xaml</DependentUpon>
     </Compile>
@@ -137,17 +143,35 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\tech bird1.jpg">
+    <Resource Include="Images\Background\tech bird1.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Images\tech bird2.jpg">
+    <Resource Include="Images\Background\tech bird2.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\puyo.jpg">
+    <Resource Include="Images\Background\puyo.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="Images\UI\down_button.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\UI\left_button.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\UI\right_button.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\UI\up_button.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\UI\option_button.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Content Include="Sound\se_clear1.wav" />
+    <Content Include="Sound\se_clear2.wav" />
+    <Content Include="Sound\se_clear3.wav" />
     <Content Include="Sound\se_click2.wav">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
