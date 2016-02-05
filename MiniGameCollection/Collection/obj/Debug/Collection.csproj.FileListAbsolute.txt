@@ -220,4 +220,3 @@ C:\Users\misa9_000\Documents\SourceTree\C#-Practice-Games\MiniGameCollection\Col
 C:\Users\misa9_000\Documents\SourceTree\C#-Practice-Games\MiniGameCollection\Collection\obj\Debug\Collection.csproj.GenerateResource.Cache
 C:\Users\misa9_000\Documents\SourceTree\C#-Practice-Games\MiniGameCollection\Collection\obj\Debug\Collection.exe
 C:\Users\misa9_000\Documents\SourceTree\C#-Practice-Games\MiniGameCollection\Collection\obj\Debug\Collection.pdb
-C:\Users\misa9_000\Documents\SourceTree\C#-Practice-Games\MiniGameCollection\Collection\obj\Debug\Collection.csprojResolveAssemblyReference.cache

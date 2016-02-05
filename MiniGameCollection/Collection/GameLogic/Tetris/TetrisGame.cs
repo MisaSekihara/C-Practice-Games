@@ -56,6 +56,7 @@ namespace Collection.GameLogic.Tetris
 
             if (isMovable)
             {
+                page.MainCanvas.Children.Clear();
                 Fall();
             }
             if (!isMovable)
@@ -70,16 +71,14 @@ namespace Collection.GameLogic.Tetris
                         GridCoordination = currentPositions[index]
                     };
                 }
-                page.MainCanvas.Children.Clear();
-                page.DrawBlock();
-                Update();
+
                 CheckLines();
             }
         }
 
         private void CheckLines()
         {
-            // Check all rows. Check from bottom
+            // Check all rows. Check from bottom lines
             for (int y = height-1; y >= 0; y--)
             {
                 int count = 0;
@@ -93,11 +92,18 @@ namespace Collection.GameLogic.Tetris
                 }
                 if (count >= width)
                 {
+                    MessageBox.Show(String.Format("Clearing row {0}", currentRow));
                     ClearLine(currentRow);
                     page.CleanCanvas();
                 }
             }
             Update();
+        }
+
+        // Check horizontal lines if there are any lines that are filled and clear them.
+        private void CheckAllBlocks()
+        {
+            
         }
 
         private void ClearLine(int whichRow)
@@ -108,13 +114,27 @@ namespace Collection.GameLogic.Tetris
                 Grid[x, whichRow] = null;
             }
             
-            // Move all other blocks downwards
+            // Move all other blocks above the specified rows downwards
             var newGrid = new Tetriminos[width, height];
             for (int x = 0; x < width; x++)
             {
-                for (int y = 0; y < height-1; y++)
+                for (int y = height-1; y > 0; y--)
                 {
-                    newGrid[x, y + 1] = Grid[x, y];
+                    if (y > whichRow)
+                    {
+                        newGrid[x, y] = Grid[x, y];
+                    }
+                    else
+                    {
+                        newGrid[x, y] = Grid[x, y-1];
+                    }
+                    if (newGrid[x, y] != null)
+                    {
+                        newGrid[x, y].GridCoordination = new Point(
+                            x * TetrisPage.PixelSize,
+                            y * TetrisPage.PixelSize);
+                    }
+
                 }
             }
             Grid = newGrid;
@@ -124,8 +144,9 @@ namespace Collection.GameLogic.Tetris
             player.Play();
         }
 
-        private void IsTetris()
+        private void IsMultiClear()
         {
+            
             
         }
 
@@ -140,7 +161,6 @@ namespace Collection.GameLogic.Tetris
 
         private void Fall()
         {
-            page.MainCanvas.Children.Clear();
             var currentPositions = CurrentMino.FourPositions;
             for (int index = 0; index < 4; index++)
             {

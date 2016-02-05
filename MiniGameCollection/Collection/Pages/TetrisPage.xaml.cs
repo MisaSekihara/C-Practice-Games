@@ -86,6 +86,7 @@ namespace Collection.Pages
 
         public void CleanCanvas()
         {
+            MainCanvas.Children.Clear();
             LandedCanvas.Children.Clear();
         }
 

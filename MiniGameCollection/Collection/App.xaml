@@ -5,17 +5,17 @@
     
     <Application.Resources>
         <Style TargetType="Button">
-            <Style.Triggers>
-                <EventTrigger RoutedEvent="MouseEnter">
-<!--                    <SoundPlayerAction Source="Sound/se_click2.wav" />-->
-                    <SoundPlayerAction Source="/Collection;component/Sound/se_click2.wav" />
-                </EventTrigger>                
-                
-                <EventTrigger RoutedEvent="Click">
-<!--                    <SoundPlayerAction Source="Sound/se_click3.wav" />-->
-                    <SoundPlayerAction Source="/Collection;component/Sound/se_click3.wav" />
-                </EventTrigger>
-            </Style.Triggers>
+<!--            <Style.Triggers>-->
+<!--                <EventTrigger RoutedEvent="MouseEnter">-->
+<!--~1~                    <SoundPlayerAction Source="Sound/se_click2.wav" />@1@-->
+<!--                    <SoundPlayerAction Source="/Collection;component/Sound/se_click2.wav" />-->
+<!--                </EventTrigger>                -->
+<!--                -->
+<!--                <EventTrigger RoutedEvent="Click">-->
+<!--~1~                    <SoundPlayerAction Source="Sound/se_click3.wav" />@1@-->
+<!--                    <SoundPlayerAction Source="/Collection;component/Sound/se_click3.wav" />-->
+<!--                </EventTrigger>-->
+<!--            </Style.Triggers>-->
         </Style>
 
         <Style x:Key="ButtonUiStyle" TargetType="Button" BasedOn="{StaticResource {x:Type Button}}">
