@@ -117,6 +117,7 @@
             </Grid>
 
         </Grid>
+        <TextBlock Grid.Column="4" Height="300" Width="220" HorizontalAlignment="Center" VerticalAlignment="Center" TextWrapping="Wrap" FontFamily="OCR A Std"  ><Run Foreground="#FF225DC5" Text="Tasks"/><LineBreak/><Run Foreground="#FF225DC5"/><LineBreak/><Run Foreground="#FF225DC5" Text="* Fix rotation position"/><LineBreak/><Run Foreground="#FF225DC5" Text="* Add score"/><LineBreak/><Run Foreground="#FF225DC5" Text="* Add timer"/><LineBreak/><Run Foreground="#FF225DC5" Text="* Allow Tetris"/><LineBreak/><Run Foreground="#FF225DC5" Text="* Allow multiline clear"/><LineBreak/><Run Foreground="#FF225DC5" Text="* Add effects when clear"/><LineBreak/><Run Foreground="#FF225DC5" Text="* Add Hold function"/><LineBreak/><Run Foreground="#FF225DC5" Text="* Add swap function"/><LineBreak/><Run Foreground="#FF225DC5" Text="* Show next block"/><LineBreak/><Run Foreground="#FF225DC5" Text="* Speed option"/><LineBreak/><Run Foreground="#FF225DC5" Text="* Add combo"/><LineBreak/><Run Text=" "/></TextBlock>
 
 
     </Grid>
