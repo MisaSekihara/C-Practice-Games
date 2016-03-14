@@ -42,3 +42,6 @@ C:\Users\misa9_000\OneDrive\PR283\Zip this2\Project\MT_Game\bin\Debug\MT_WinForm
 C:\Users\misa9_000\OneDrive\PR283\Zip this2\Project\MT_Game\obj\Debug\MT_GameStarter.csprojResolveAssemblyReference.cache
 C:\Users\misa9_000\OneDrive\PR283\Zip this2\Project\MT_Game\obj\Debug\MT_Game.Properties.Resources.resources
 C:\Users\misa9_000\OneDrive\PR283\Zip this2\Project\MT_Game\obj\Debug\MT_GameStarter.csproj.GenerateResource.Cache
+C:\Users\misa9_000\Documents\SourceTree\C#-Practice-Games\Minotaur and Theseus\MT_Game\bin\Debug\MT_Game.exe.config
+C:\Users\misa9_000\Documents\SourceTree\C#-Practice-Games\Minotaur and Theseus\MT_Game\obj\Debug\MT_Game.exe
+C:\Users\misa9_000\Documents\SourceTree\C#-Practice-Games\Minotaur and Theseus\MT_Game\obj\Debug\MT_Game.pdb
